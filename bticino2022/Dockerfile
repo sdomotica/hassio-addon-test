@@ -13,7 +13,7 @@
 #EXPOSE 3100 3000 3300
 #CMD ./sdomotica/sdomoticarpi
 
-FROM sdomotica/sdomotica2022:test
+FROM sdomotica/sdomotica2022:testing
 #VOLUME /sdomotica
 EXPOSE 3100 3000 3300
 CMD ./sdomotica/sdomoticarpi
