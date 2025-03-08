@@ -1,0 +1,25 @@
+{
+  "name": "Sdomotica Home + Control TEST",
+  "version": "2024.4.2",
+  "slug": "sdomoticanetatmo2022",
+  "arch": ["armhf", "armv7", "aarch64"],
+  "description": "For Living Now Smart, Smarther2 X8002, Netatmo Valve, Netatmo Meteo",
+  "url": "https://www.facebook.com/sdomotica",
+   "webui": "http://[HOST]:[PORT:3401]",  
+  "startup": "application",
+  "boot": "auto",
+
+  "ports": {
+    "3401/tcp": 3401
+
+   },
+  "map": [
+    "share:rw",
+	"config:rw"
+  ],
+  "options": {
+  },
+  "schema": {
+  }
+  
+}
