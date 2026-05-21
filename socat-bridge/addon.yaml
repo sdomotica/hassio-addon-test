@@ -1,0 +1,90 @@
+---
+name: "Socat Bridge"
+description: "Network bridge using socat - forward ports and IPs"
+version: "1.0.0"
+slug: "socat-bridge"
+init: false
+startup: services
+boot: auto
+
+# Dipendenze
+require:
+  - homeassistant
+
+# Opzioni per l'interfaccia web
+options:
+  bridges: []
+  log_level: "info"
+
+# Schema delle opzioni
+schema:
+  bridges:
+    name: "Bridge Configurations"
+    description: "List of port/IP bridges to create"
+    type: list
+    items:
+      type: map
+      properties:
+        name:
+          name: "Bridge Name"
+          description: "Name for this bridge (e.g., 'Device 192.168.1.100')"
+          type: string
+          required: true
+        listen_address:
+          name: "Listen Address"
+          description: "Address to listen on (0.0.0.0 for all interfaces)"
+          type: string
+          default: "0.0.0.0"
+          required: true
+        listen_port:
+          name: "Listen Port"
+          description: "Port to listen on"
+          type: integer
+          required: true
+          example: 8080
+        target_address:
+          name: "Target Address"
+          description: "Target IP or hostname"
+          type: string
+          required: true
+          example: "192.168.1.100"
+        target_port:
+          name: "Target Port"
+          description: "Target port"
+          type: integer
+          required: true
+          example: 80
+        protocol:
+          name: "Protocol"
+          description: "Protocol type"
+          type: string
+          enum:
+            - "TCP"
+            - "UDP"
+          default: "TCP"
+        enabled:
+          name: "Enabled"
+          description: "Enable this bridge"
+          type: boolean
+          default: true
+  
+  log_level:
+    name: "Log Level"
+    description: "Logging level"
+    type: select
+    options:
+      - "debug"
+      - "info"
+      - "warning"
+      - "error"
+    default: "info"
+
+# Ports mapping (opzionale)
+ports:
+  8080/tcp: null
+  9090/tcp: null
+
+# Ports mapping descriptions (per Home Assistant UI)
+ports_description:
+  8080/tcp: "Default bridge port"
+  9090/tcp: "Optional additional port"

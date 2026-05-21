@@ -1,0 +1,14 @@
+name: "Socat Bridge"
+description: "Reindirizza il traffico dalla porta locale 83 alla porta 80 dell'IP 192.168.1.120"
+version: "1.0.0"
+slug: "socat_bridge"
+arch:
+  - amd64
+  - i386
+  - aarch64
+  - armv7
+init: false
+options: {}
+schema: {}
+ports:
+  83/tcp: 83  # Mappa la porta 83 del container sulla porta 83 dell'host di Home Assistant

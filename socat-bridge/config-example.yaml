@@ -1,0 +1,26 @@
+bridges:
+  - name: "Fotocamera"
+    listen_address: "0.0.0.0"
+    listen_port: 8001
+    target_address: "192.168.1.50"
+    target_port: 80
+    protocol: "TCP"
+    enabled: true
+
+  - name: "Sensore NVR"
+    listen_address: "0.0.0.0"
+    listen_port: 8002
+    target_address: "192.168.1.100"
+    target_port: 8080
+    protocol: "TCP"
+    enabled: true
+
+  - name: "Device IoT"
+    listen_address: "0.0.0.0"
+    listen_port: 8003
+    target_address: "192.168.1.200"
+    target_port: 3000
+    protocol: "TCP"
+    enabled: true
+
+log_level: "info"
