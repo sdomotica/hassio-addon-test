@@ -1,21 +1,16 @@
 {
-  "name": "SSocat Bridge",
+  "name": "Socat Bridge",
   "version": "2026.09.01",
   "slug": "socat_bridge",
-  "arch": ["amd64", "i386","aarch64","armv7"],
+  "init": false,
+  "arch": ["amd64", "i386", "aarch64", "armv7"],
   "description": "Reindirizza il traffico dalla porta locale",
-
   "ports": {
     "83/tcp": 83,
-    "84/tcp": 84
-
-   },
-  "map": [
-    "share:rw",
-	"config:rw"
-  ],
-  "options": {
+    "84/tcp": 84,
+    "502/tcp": 502
   },
-  "schema": {
-  }
+  "map": ["share:rw", "config:rw"],
+  "options": {},
+  "schema": {}
 }
