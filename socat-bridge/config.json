@@ -3,7 +3,7 @@
   "version": "2026.09.01",
   "slug": "socat_bridge",
   "init": false,
-  "arch": ["amd64", "i386", "aarch64", "armv7"],
+  "arch": ["aarch64", "amd64"],
   "description": "Reindirizza il traffico dalla porta locale",
   "ports": {
     "83/tcp": 83,
