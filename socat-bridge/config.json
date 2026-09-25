@@ -8,7 +8,8 @@
   "ports": {
     "83/tcp": 83,
     "84/tcp": 84,
-    "502/tcp": 502
+    "502/tcp": 502,
+	"10002/tcp": 10002
   },
   "map": ["share:rw", "config:rw"],
   "options": {},
