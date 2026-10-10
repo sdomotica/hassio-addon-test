@@ -2,7 +2,7 @@
 
 # Array con le configurazioni: "porta_locale:ip_dest:porta_dest:nome"
 CONFIGURAZIONI=(
-    "83:192.168.110.60:80:INIM"
+    "83:192.168.10.105:80:Refoss"
     "84:192.168.1.102:80:Ecowitt"
     "502:192.168.110.60:502:INIMMODBUS2"
     "10005:10.100.100.100:10005:TECNOALARM"
